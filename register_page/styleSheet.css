@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Inter,sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: white;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    display: flex;
+}
+
+.container{
+    justify-content: space-between;
+    gap: 4rem;
+    width: 500rem;
+    padding-left: 9rem;
+    padding-top: 4rem;
+    /*background: url("blue_purple_smoke_background_hd_cellular-1366x768.jpg");*/
+    border-radius: 8px;
+}
+
+.container header{
+    /*background-color: #F9F3EF ;*/
+    text-align: center;
+    font-family: inter,sans-serif;
+    padding-right: 16.5rem;
+    font-size: 3rem;
+    color: black;
+}
+.container h3{
+    padding-left: 1.5rem;
+    padding-top: 3rem;
+}
+
+
+.container form{
+    /*margin-top: 30px;*/
+    width: 100%;
+    max-width: 10rem;
+    padding: 20px;
+    justify-content: flex-start;
+    display: flex;
+    font-size: 1.5rem;
+    flex-direction: column;
+}
+
+.container .form input{
+    margin-bottom: 3rem;
+    width: 30rem;
+    border-radius: 5px;
+    height: 3rem;
+    margin-top: 10px;
+}
+
+.submit{
+    /*padding-left: 5rem;*/
+    /*justify-content: center;*/
+    text-align: center;
+    font-size: 1.5rem;
+    margin-left: 3rem;
+    width: 25rem;
+    height: 4rem;
+    border-radius: 30px;
+    background-color: #F9F3EF;
+    cursor: pointer;
+    box-shadow:  0px 1px 0px 1px black;
+}
