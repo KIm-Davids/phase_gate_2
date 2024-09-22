@@ -94,7 +94,9 @@ function addRow(expense){
     cellExpenseType.textContent = expense.expenseType;
     row.appendChild(cellExpenseType)
 
-    const cellDescription = document.getElementById()
+    const cellDescription = document.createElement('td')
+    cellDescription.textContent = expense.description;
+    row.appendChild(cellDescription)
 
     const cellAmount = document.createElement('td')
     cellAmount.textContent = `$${expense.totalExpenses.toFixed(2)}`;
