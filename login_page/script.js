@@ -9,7 +9,7 @@ form.addEventListener('submit', async (e) => {
 
     try{
         console.log("1st")
-        const response = await fetch("http://localhost:8080/api/v1/user/login/",
+        const response = await fetch("http://localhost:8085/api/v1/user/login/",
         {
             method: "PATCH",
             headers:{
@@ -20,12 +20,13 @@ form.addEventListener('submit', async (e) => {
 
         if(response.ok){
             const result = await response.text();
-            alert('success')
-            console.log(result)
+            window.location.href = "../dashboard/index.html"
+            // alert('success')
+            // console.log(result)
         }
         else{
             const err = await response.text();
-            alert(err)
+            alert("There was a problem, pls try to login again")
             console.log(err)
         }
     }catch (error){

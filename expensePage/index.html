@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UpTree | Expense Page</title>
+    <link rel="stylesheet" href="styleSheet.css">
+    <link rel="icon" href="faviscon2.jpg">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(() => {
+            fetch('http://localhost:8080/api/v1/expenses/get-all-expenses',{
+                method: "GET",
+                headers:{"content-type":"application/json"}
+            })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log("all data ", data)
+                    if(data.successful && Array.isArray(data.data)){
+                        drawChart(data.data)
+                    }else{
+                        console.error('Invalid data format', data);
+                    }
+                }).catch(error => console.error('Error fetching data', error))
+        });
+
+
+        function drawChart(expensesData) {
+            if(!Array.isArray(expensesData)){
+                console.error('Expected an array but got an', expensesData)
+            }
+            // var data = google.visualization.arrayToDataTable([
+
+            const expenseMap = {}
+            expensesData.forEach(expense => {
+                if(expense.expenseType && expense.totalExpenses){
+                    if(!expenseMap[expense.expenseType]){
+                        expenseMap[expense.expenseType] = 0;
+                    }
+                    expenseMap[expense.expenseType] += expense.totalExpenses
+                }else{
+                    console.error('Invalid expense object',expense)
+                }
+            })
+
+            const chartData =  [['Expenses', 'Amount']]
+
+            for(const[expenseType, totalAmount] of Object.entries(expenseMap)){
+                chartData.push([expenseType, totalAmount])
+            }
+
+            var data = google.visualization.arrayToDataTable(chartData)
+
+            var options = {
+                title: 'My Expenses'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+            }
+        </script>
+    <body>
+
+    <div>
+        <p class="totalExpenses" id="totalExpenseAmount">Total Expenses: </p>
+    </div>
+    <div class="addExpenses">
+        <form action="#" id="form">
+                <div class="form">
+                <div class="form-title">Add Expenses</div>
+                <div class="form-container">
+                <input id="totalExpensesAmount" type="number" placeholder="Enter Amount">
+                <input id="description" type="text" placeholder="Description">
+                <input id="date" type="datetime-local" placeholder="Enter date">
+                <select id="expenseType">
+                    <option value="">Select a type of expense</option>
+                    <option value="FEEDING">FEEDING</option>
+                    <option value="TRANSPORTATION">TRANSPORTATION</option>
+                    <option value="TAX">TAX</option>
+                    <option value="RENT">RENT</option>
+                    <option value="CLOTHING">CLOTHING</option>
+                    <option value="PERSONAL_EXPENSES">PERSONAL EXPENSES</option>
+                    <option value="MISCELLANEOUS">MISCELLANEOUS</option>
+                </select>
+                <button class="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+        <div id="piechart" style="width: 700px; height: 500px;" class="chart"></div>
+    </div>
+    </body>
+    <script src="scripts.js"></script>
+    </html>
+<body>
+<section>
+    <h1>Expense List</h1>
+    <div class="scrollable-container">
+         <table class="data-table">
+             <thead>
+                <tr>
+                 <th>Expense Type</th>
+                 <th>Description</th>
+                 <th>Amount</th>
+                </tr>
+             </thead>
+             <tbody id="table-body">
+
+             </tbody>
+         </table>
+    </div>
+
+</section>
+</body>

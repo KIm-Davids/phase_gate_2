@@ -1,0 +1,120 @@
+*{
+    background: #F9F3EF;
+}
+
+body{
+
+}
+
+.chart{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10rem;
+    margin-top: -12rem;
+    margin-left: 40rem;
+    padding: 10px;
+
+}
+
+.header{
+    /*background-color: white;*/
+    /*padding-bottom: 3rem;*/
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    /*height: 30rem;*/
+
+}
+
+.addExpenses{
+    display: flex;
+    font-family: Inter, sans-serif;
+    flex-direction: column;
+    width: 25rem;
+    justify-content: center;
+    align-content: center;
+    margin-top: 30rem;
+    margin-left: 29rem;
+    margin-right: -4rem;
+}
+
+.form  {
+    width: 300px;
+    margin-left: 10rem ;
+}
+
+.form-title{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.expenseType{
+    padding: 30px;
+}
+
+.form-container input,
+.form-container button {
+    padding: 10px;
+    font-size: 1rem ;
+}
+
+#description{
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#description::placeholder{
+    text-align: left;
+    line-height: 1.2;
+    padding-top: 0;
+    vertical-align: top;
+}
+
+.submit{
+    background: #2661EB;
+    color: white;
+}
+
+.totalExpenses{
+    background: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: -12rem;
+    margin-left: 39rem;
+    margin-top: 8rem;
+    height: 5rem;
+    width: 74rem;
+}
+
+.scrollable-container{
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 20px
+}
+
+.data-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #f4f4f4;
+}

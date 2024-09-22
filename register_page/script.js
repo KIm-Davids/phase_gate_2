@@ -13,7 +13,7 @@ form.addEventListener('submit', async(e) => {
         const password = document.getElementById("password").value
 
     try{
-        const response  = await fetch("http://localhost:8080/api/v1/user/register",
+        const response  = await fetch("http://localhost:8085/api/v1/user/register",
             {method:"POST", headers: {
                 "content-Type" : "application/json"
                 },
@@ -22,8 +22,9 @@ form.addEventListener('submit', async(e) => {
 
         if(response.ok) {
             const result = await response.text();
-            alert('success');
+            alert("Registered Successfully");
             console.log(result);
+            window.location.href = "../login_page/index.html";
         }
         else{
         const err = await response.text();

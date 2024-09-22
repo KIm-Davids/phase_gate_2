@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UpTree | DashBoard</title>
+    <link rel="stylesheet" href="styleSheet.css">
+    <link rel="icon" href="faviscon2.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512- Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./script.js" defer></script>
+
+</head>
+<body>
+<section>
+    <div>
+        <div>
+            <div class="whiteBackground">
+                <img src="R.jpeg" width="280" height="1000">
+            </div>
+            <div class="nav">
+                <div>
+                    <p class="headerWriting" >UpTree Advanced Expense Tracker</p>
+                </div>
+                <div>
+                <input class="searchInput" src="text" placeholder="Search"><i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+<!--            </div>-->
+<!--                    <img class="headerBackground" src="OIP.jpeg" width="1900" height="200">-->
+<!--        </div>-->
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div>
+            <div>
+                <img src="faviscon2.jpg" style="border-radius: 12px"  width="70" height="70" class="headerIcon">
+            </div>
+        </div>
+</section>
+<section>
+    <div class="menuOptions">
+        <div>
+            <button class="addExpense"><i class="fa-solid fa-chart-pie"></i> Expenses</button>
+        </div>
+        <div>
+            <button class="addIncome"><i class="fa-solid fa-money-bill-wave"></i> Income</button>
+        </div>
+        <div>
+            <button class="removeExpenses"><i class="fa-solid fa-chart-line"></i> Track receipts</button>
+        </div>
+        <div>
+            <button class="removeIncome"><i class="fa-solid fa-wallet"></i> Manage Expenses</button>
+        </div>
+        <div>
+            <button class="updateIncome"><i class="fa-solid fa-user"></i> Profile</button>
+        </div>
+        <div>
+            <button class="updateExpenses">Update Expenses</button>
+        </div>
+        <div>
+            <a href="../login_page/index.html"><button class="logOut">Log Out</button></a>
+        </div>
+        </div>
+</section>
+
+<section>
+    <div>
+        <div class="dashboardElement">
+            <div>
+               <div class="viewButtons">Expenses <i class="fas fa-dollar-sign icon"> </i></div>
+                <p id="expenseType"></p>
+                <p id="totalExpenses"></p>
+                <p id="description"></p>
+                <p id="localDateTime"></p>
+                <div/>
+            <div>
+                <div class="incomeCard">Income  <i class="fas fa-dollar-sign icon"></i></div>
+            </div>
+            <div>
+                <div class="profitCard"><span style="font-weight: bolder">Profit</span>  <i class="fas fa-dollar-sign icon"></i></div>
+            </div>
+                <div>
+                    <div class="expectedEarningsCard">Expected Earnings  <i class="fa-solid fa-chart-simple icon"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div>
+        <div class="table">
+            <div>
+                <h3 class="main-title">Expense Data</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Expense Type</th>
+                                <th>Expense Amount</th>
+                                <th>Expense Desc</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--<section>-->
+<!--    <div class=" ">-->
+<!--        <div>-->
+<!--            <button class="income"><p class="incomeButton">Income</p></button>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <button class="expenses"><p class="expenseButton">Expenses</p></button>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <button class="profit"><p class="profitButton">Profit / Loss</p></button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+</body>
+<!--<script src="script.js"></script>-->
+</html>

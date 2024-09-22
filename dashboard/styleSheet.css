@@ -1,0 +1,431 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-width: 100vh;
+    font-family: Inter,sans-serif;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav{
+    margin-top: -60rem;
+    /*padding-top: -80rem;*/
+    margin-left: 103rem;
+}
+
+.fa-solid {
+    margin-left: -4rem;
+}
+
+.nav .searchInput{
+    width: 15rem;
+    height: 3rem;
+    margin-left: -19rem;
+    margin-top: -1rem;
+    border-radius: 12px;
+    padding-right: 2rem;
+}
+
+.searchInput::placeholder{
+    padding-left: 1rem;
+}
+
+.nav .headerWriting{
+    margin-left: -103rem;
+    margin-top: -3rem;
+    align-content: center;
+    font-weight: bolder;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    background-color: #658CBB;
+    width: 118.95rem;
+    height: 6rem;
+}
+
+.headerIcon{
+    margin-top: -70rem;
+    /*z-index: 1;*/
+    margin-left: 4rem;
+}
+
+.nav .headerBackground{
+    /*margin-left: -1rem;*/
+    margin-top: -100rem;
+    /*margin-right: 3rem;*/
+    margin-bottom: 5rem;
+    /*z-index: 0;*/
+    position: relative;
+}
+
+
+.menuOptions{
+    flex-direction: column;
+    width: 8rem;
+    column-gap: 4rem;
+    gap: 4rem;
+    margin-top: 4rem;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: #F9F3EF;
+}
+
+.addExpense{
+    margin-left: 1rem;
+    padding-left: 4rem;
+    width: 15rem;
+    height: 2rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    border-color: #F9F3EF;
+    border-radius: 12px;
+}
+
+.addExpense:hover{
+    background-color: #658CBB;
+    color: whitesmoke;
+}
+
+.addIncome{
+    margin-left: 1rem;
+    padding-left: 4rem;
+    width: 15rem;
+    height: 2rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    border-color: #F9F3EF;
+    border-radius: 12px;
+
+}
+
+
+.addIncome:hover{
+    background-color: #658CBB;
+    color: whitesmoke;
+}
+
+.removeExpenses{
+    margin-left: 1rem;
+    padding-left: 4rem;
+    width: 15rem;
+    margin-bottom: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    border-color: #F9F3EF;
+    border-radius: 12px;
+
+}
+
+.removeExpenses:hover{
+    background-color: #658CBB;
+    color: whitesmoke;
+}
+
+
+
+.removeIncome{
+    margin-left: 1rem;
+    padding-left: 4.5rem;
+    width: 15rem;
+    margin-bottom: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    border-color: #F9F3EF;
+    border-radius: 12px;
+
+}
+
+.removeIncome:hover{
+    background-color: #658CBB;
+    color: whitesmoke;
+}
+
+
+.updateExpenses{
+    margin-left: 1rem;
+    /*padding-left: 2rem;*/
+    width: 15rem;
+    height: 2rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    border-color: #F9F3EF;
+    border-radius: 12px;
+
+}
+
+
+.updateExpenses:hover{
+    background-color: #658CBB;
+    color: whitesmoke;
+}
+
+
+.updateIncome{
+    margin-left: 1rem;
+    width: 15rem;
+    padding-left: 3rem;
+    height: 2rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    border-color: #F9F3EF;
+    border-radius: 12px;
+
+}
+
+
+.updateIncome:hover{
+    background-color: #658CBB;
+    color: whitesmoke;
+}
+
+.logOut{
+    margin-left: 1rem;
+    width: 15rem;
+    height: 2rem;
+    margin-top: 22rem;
+    background-color: transparent;
+    cursor: pointer;
+    border-color: #F9F3EF;
+    border-radius: 12px
+}
+
+.displayButton{
+    margin-top: -40rem;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20rem;
+
+}
+
+.displayButton .income{
+    width: 16rem;
+    margin-right: 1rem;
+    /*margin-right: -3rem;*/
+    /*margin-bottom: -40rem;*/
+    height: 7rem;
+    text-align: left;
+    border-radius: 20px;
+    border-color: greenyellow;
+    background-color: whitesmoke;
+}
+
+.income .incomeButton{
+    margin-left: 5.5rem;
+    margin-top: -3.5rem;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.displayButton .expenses{
+    margin-left: 5rem;
+    margin-top: -42rem;
+       margin-right: 15rem;
+    width: 16rem;
+    height: 7rem;
+    text-align: left;
+    border-radius: 20px;
+    border-color: indianred;
+    background-color: whitesmoke;
+}
+
+.expenseButton {
+    margin-left: 5.5rem;
+    margin-top: -3.5rem;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.displayButton .profit{
+    margin-right: -15rem;
+    width: 16rem;
+    height: 7rem;
+    text-align: left;
+    border-radius: 20px;
+    /*margin-right: -4rem;*/
+    margin-top: -40rem;
+    border-color: greenyellow;
+    background-color: whitesmoke;
+}
+
+.profitButton{
+    margin-left: 5rem;
+    margin-top: -3.4rem;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.dashboardElement {
+    /*justify-content: center;*/
+    display: flex;
+    margin-left: 30rem;
+    flex-direction: row;
+   margin-top: -45rem;
+}
+.dashboardElement .viewButtons{
+
+   background-color: #CD946A;
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 20rem;
+    height: 150px;
+    margin-left: -9rem;
+    display: flex;
+    flex-direction: row;
+    transition: all 0.5s ease-in-out;
+    justify-content: space-between;
+}
+
+.viewButtons:hover{
+    transform: translateY(-5px);
+}
+
+.incomeCard{
+
+    background-color: #7BC17E;
+    border-radius: 10px;
+    font-weight: bolder;
+    flex-direction: row;
+    padding: 1.2rem;
+    width: 20rem;
+    height: 150px;
+    margin-left: 14rem;
+    margin-top: -9.3rem;
+    display: flex;
+    transition: all 0.5s ease-in-out;
+    justify-content: space-between;
+}
+
+.profitCard{
+    /*background-color: #FFFAC9;*/
+    background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.5), rgba(0, 128, 0, 0.5));    border-radius: 10px;
+    padding: 1.2rem;
+    width: 20rem;
+    height: 150px;
+    margin-left: 37rem;
+    margin-top: -9.3rem;
+    display: flex;
+    flex-direction: row;
+    transition: all 0.5s ease-in-out;
+    justify-content: space-between;
+}
+
+.expectedEarningsCard{
+    background-color: #5075AC;
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 20rem;
+    height: 150px;
+    font-weight: bolder;
+    margin-left: 60rem;
+    margin-top: -9.3rem;
+    display: flex;
+    flex-direction: row;
+    transition: all 0.5s ease-in-out;
+    justify-content: space-between;
+}
+
+.viewButtons .icon{
+    color: white;
+    padding: 0.8rem;
+    height: 45px;
+    margin-top: -1rem;
+    background-color: #D3494E;
+    width: 45px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.incomeCard .icon{
+    color: white;
+    padding: 0.8rem;
+    height: 45px;
+    margin-top: -1rem;
+    background-color: #A4D1A2;
+    width: 45px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.incomeCard:hover{
+    transform: translateY(-5px);
+}
+
+
+.profitCard .icon{
+    color: white;
+    padding: 0.8rem;
+    height: 45px;
+    margin-top: -1rem;
+    background-color: #7BC17E;
+    width: 45px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.profitCard:hover{
+    transform: translateY(-5px);
+}
+
+
+.expectedEarningsCard .icon{
+    color: white;
+    padding: 0.8rem;
+    height: 45px;
+    margin-top: -1rem;
+    background-color: #969CBA;
+    width: 45px;
+    text-align: center;
+    border-radius: 50px
+}
+
+.expectedEarningsCard:hover{
+    transform: translateY(-5px);
+}
+
+.main-title{
+    /*margin-top: 6rem;*/
+    color: rgb(101,140,187);
+    /*margin-left: 4rem;*/
+}
+
+
+.table{
+    flex-direction: column;
+    margin-top: 3rem;
+    padding: 2rem;
+    justify-content: center;
+    gap: 3rem;
+    align-content: space-evenly;
+    margin-left: 20.5rem;
+    background: whitesmoke;
+    border-radius: 10px;
+    width: 76%;
+}
+
+
+.table-container{
+    margin-top: 2rem;
+    row-gap:3rem;
+    width: 97%
+}
+
+th{
+    row-gap: 2rem;
+    /*display: flex;*/
+    flex-direction: row;
+    width: 30rem;
+}
